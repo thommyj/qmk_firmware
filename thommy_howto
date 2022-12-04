@@ -1,3 +1,6 @@
+. qmk_venv/bin/activate
+
+
 qmk compile -kb xiudi/xd87 -km thommy
 qmk flash  -kb xiudi/xd87 -km thommy #as root, why needed?
 
