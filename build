@@ -1,0 +1,8 @@
+qmk compile -kb xiudi/xd87 -km thommy
+qmk flash  -kb xiudi/xd87 -km thommy #as root, why needed?
+
+qmk flash -kb wheatfield/split75 -km split_thommy
+
+sudo avrdude -B 1kHz -c stk500v2 -p m32u4 -P /dev/ttyUSB0 -U efuse:w:0xF2:m
+make evyd13/wasdat:default:bootloader 
+qmk compile -kb evyd13/wasdat -km default 
